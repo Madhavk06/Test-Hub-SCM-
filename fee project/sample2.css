@@ -1,0 +1,327 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a396;
+    padding: 15px 30px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-items a {
+   
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .nav-items a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  main {
+    padding: 90px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .intro p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .intro button {
+    background-color: #29a396;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  .intro button:hover {
+    background-color: #257b73;
+  }
+  
+  /* Achievements section */
+  .achievements {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .work {
+    flex-basis: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .work i {
+    font-size: 2rem;
+    color: #29a396;
+  }
+  
+  .work-heading {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .work-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* About Me section */
+  .about-me {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+  }
+  
+  .about-me-text {
+    flex-basis: 50%;
+  }
+  
+  .about-me-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-me-text p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .about-me img {
+    flex-basis: 50%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .login-form button {
+    background-color: #29a396;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  .login-form button:hover {
+    background-color: #257b73;
+  }
+  
+  .signup-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .signup-text a {
+    color: #29a396;
+    font-weight: bold;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #survey-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #29a396;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218f7a;
+  }
+  
+  .checkbox-group, .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-group label, .radio-group label {
+    margin-left: 5px;
+  }
+  
+  .footer {
+    margin-top: 50px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+ 
+.header {
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+.header .logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 60px;
+}
+
+.user-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-form button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-form button:hover {
+    background: #0056b3;
+}
+
+.toggle-text {
+    margin-top: 20px;
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: underline;
+}

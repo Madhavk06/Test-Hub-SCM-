@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyPro-Home</title>
+    <link rel="stylesheet" href="sample2.css">
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIG4.6gFOJQM0j09EADU3YxtU&pid=ImgGn" type="image/png">
+    <style>
+        .header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logoName{
+            display: flex;
+        }
+        .logo {
+            font-size: 1.5em;
+            color: #fff;
+           
+        }
+        .logo-img {
+            width: 30px;
+            margin-right: 10px;
+            height: 35px;
+        }
+        .nav-items {
+            position: relative;
+            display:flex;
+            width: 12%;
+        }
+        .nav-items a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 121px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .nav-items:hover .dropdown-content {
+            display: block;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .intro, .achievements, .about-me {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .work {
+            animation: slideIn 2s ease-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .work:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .center-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+            margin-bottom: 20px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logoName">
+        <img src="https://tse3.mm.bing.net/th?id=OIG4.6gFOJQM0j09EADU3YxtU&pid=ImgGn" alt="SurveyPro Logo" class="logo-img">
+        <a href="#" class="logo">SurveyPro</a>
+        </div>
+        <nav class="nav-items">
+            <a href="home.html">Home</a>
+            <div class="nav-items">
+                <a href="javascript:void(0)">Surveys</a>
+                <div class="dropdown-content">
+                    <a href="survey1.html">Survey 1</a>
+                    <a href="survey2.html">Survey 2</a>
+                    <a href="survey3.html">Survey 3</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h1>Join Our Surveys</h1>
+            <p>Participate in surveys and help shape the future of the university with your feedback!</p>
+        </div>
+        <div class="center-button">
+            <a href="survey.html" class="btn">Let's Start</a>
+        </div>
+        <div class="achievements">
+            <div class="work">
+                <i class="fas fa-poll"></i>
+                <p class="work-heading">Available Surveys</p>
+                <p class="work-text">Explore a variety of surveys on different topics, including infrastructure, hostels, and staff members, and share your opinions.</p>
+            </div>
+            <div class="work">
+                <i class="fas fa-users"></i>
+                <p class="work-heading">Community</p>
+                <p class="work-text">Join our growing community of respondents and contribute to meaningful research.</p>
+            </div>
+            <div class="work">
+                <i class="fas fa-chart-bar"></i>
+                <p class="work-heading">Insights</p>
+                <p class="work-text">Get valuable insights and see how your feedback impacts decisions.</p>
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="about-me-text">
+                <h2>About Us</h2>
+                <p>SurveyPro is dedicated to gathering valuable feedback through innovative surveys. We provide a platform for users to voice their opinions and influence the future of universities.</p>
+            </div>
+            <img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg" alt="survey">
+        </div>
+    </main>
+</body>
+</html>

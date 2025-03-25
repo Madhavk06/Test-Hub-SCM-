@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyPro-Survey Form</title>
+    <link rel="stylesheet" href="sample2.css">
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIG4.6gFOJQM0j09EADU3YxtU&pid=ImgGn" type="image/png">
+    <style>
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .btn-animate {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-animate:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fireworks {
+            0% {
+                opacity: 1;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        .appreciation-box {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .back-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ccc;
+            border: 1px solid #888;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #bbb;
+        }
+
+        .fill-another {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: popUp 0.5s ease-out;
+        }
+
+        .fill-another a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fill-another a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes popUp {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+            }
+
+            to {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .reminder {
+            display: none;
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffcc00;
+            padding: 10px 20px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">SurveyPro</a>
+        <nav class="nav-items">
+            <a href="home.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <header>
+                <h2 id="title">Survey Form</h2>
+                <p id="description">Thank you for taking the time to give us feedback!</p>
+            </header>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <form id="survey-form" class="survey-form" onsubmit="return handleSubmit(event);">
+                <!-- Section 1: Basic Information -->
+                <div class="form-section active">
+                    <div class="form-group">
+                        <label for="name" id="name-label">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" id="email-label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                </div>
+
+               <!-- Section 2: Infrastructure -->
+<div class="form-section">
+    <h3>Infrastructure</h3>
+    <div class="form-group">
+        <label for="infrastructure-satisfaction">How satisfied are you with the overall infrastructure?</label>
+        <input type="radio" name="infrastructure-satisfaction" id="infra-sat-1" value="very-satisfied" required>
+        <label for="infra-sat-1">Very Satisfied</label>
+        <input type="radio" name="infrastructure-satisfaction" id="infra-sat-2" value="satisfied" required>
+        <label for="infra-sat-2">Satisfied</label>
+        <input type="radio" name="infrastructure-satisfaction" id="infra-sat-3" value="neutral" required>
+        <label for="infra-sat-3">Neutral</label>
+        <input type="radio" name="infrastructure-satisfaction" id="infra-sat-4" value="dissatisfied" required>
+        <label for="infra-sat-4">Dissatisfied</label>
+        <input type="radio" name="infrastructure-satisfaction" id="infra-sat-5" value="very-dissatisfied" required>
+        <label for="infra-sat-5">Very Dissatisfied</label>
+    </div>
+    <div class="form-group">
+        <label for="infrastructure-improvements">Which areas of infrastructure need improvement? (Select all that apply):</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="infrastructure-improvements" id="infra-improve-1" value="lighting">
+            <label for="infra-improve-1">Lighting</label>
+            <input type="checkbox" name="infrastructure-improvements" id="infra-improve-2" value="seating">
+            <label for="infra-improve-2">Seating</label>
+            <input type="checkbox" name="infrastructure-improvements" id="infra-improve-3" value="wifi">
+            <label for="infra-improve-3">Wi-Fi</label>
+            <input type="checkbox" name="infrastructure-improvements" id="infra-improve-4" value="signage">
+            <label for="infra-improve-4">Signage</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="infrastructure-frequency">How often do you encounter issues with the infrastructure?</label>
+        <select name="infrastructure-frequency" id="infrastructure-frequency" required>
+            <option value="" disabled selected>Select</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="rarely">Rarely</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="infrastructure-comments">Any additional comments about the infrastructure:</label>
+        <textarea name="infrastructure-comments" id="infrastructure-comments" placeholder="Your comments..." required></textarea>
+    </div>
+</div>
+
+
+
+               <!-- Section 3: Staff Members -->
+<div class="form-section">
+    <h3>Staff Members</h3>
+    <div class="form-group">
+        <label for="staff-helpfulness">How helpful do you find the staff members?</label>
+        <input type="radio" name="staff-helpfulness" id="staff-help-1" value="very-helpful" required>
+        <label for="staff-help-1">Very Helpful</label>
+        <input type="radio" name="staff-helpfulness" id="staff-help-2" value="helpful" required>
+        <label for="staff-help-2">Helpful</label>
+        <input type="radio" name="staff-helpfulness" id="staff-help-3" value="neutral" required>
+        <label for="staff-help-3">Neutral</label>
+        <input type="radio" name="staff-helpfulness" id="staff-help-4" value="unhelpful" required>
+        <label for="staff-help-4">Unhelpful</label>
+        <input type="radio" name="staff-helpfulness" id="staff-help-5" value="very-unhelpful" required>
+        <label for="staff-help-5">Very Unhelpful</label>
+    </div>
+    <div class="form-group">
+        <label for="staff-improvements">What improvements would you like to see in staff interactions? (Select all that apply):</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="staff-improvements" id="staff-improve-1" value="communication">
+            <label for="staff-improve-1">Better Communication</label>
+            <input type="checkbox" name="staff-improvements" id="staff-improve-2" value="availability">
+            <label for="staff-improve-2">Increased Availability</label>
+            <input type="checkbox" name="staff-improvements" id="staff-improve-3" value="training">
+            <label for="staff-improve-3">More Training</label>
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="staff-availability">How often are staff members available when you need them?</label>
+        <select name="staff-availability" id="staff-availability" required>
+            <option value="" disabled selected>Select</option>
+            <option value="always">Always</option>
+            <option value="often">Often</option>
+            <option value="sometimes">Sometimes</option>
+            <option value="rarely">Rarely</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="staff-feedback">Any additional feedback about the staff members:</label>
+        <textarea name="staff-feedback" id="staff-feedback" placeholder="Your feedback..." required></textarea>
+    </div>
+</div>
+
+
+
+                <!-- Section 4: Hostels and Mess -->
+<div class="form-section">
+    <h3>Hostels and Mess</h3>
+    <div class="form-group">
+        <label for="hostel-cleanliness">How would you rate the cleanliness of the hostel?</label>
+        <input type="radio" name="hostel-cleanliness" id="hostel-clean-1" value="very-clean" required>
+        <label for="hostel-clean-1">Very Clean</label>
+        <input type="radio" name="hostel-cleanliness" id="hostel-clean-2" value="clean" required>
+        <label for="hostel-clean-2">Clean</label>
+        <input type="radio" name="hostel-cleanliness" id="hostel-clean-3" value="average" required>
+        <label for="hostel-clean-3">Average</label>
+        <input type="radio" name="hostel-cleanliness" id="hostel-clean-4" value="dirty" required>
+        <label for="hostel-clean-4">Dirty</label>
+        <input type="radio" name="hostel-cleanliness" id="hostel-clean-5" value="very-dirty" required>
+        <label for="hostel-clean-5">Very Dirty</label>
+    </div>
+    <div class="form-group">
+        <label for="mess-variety">How would you rate the variety of food in the mess?</label>
+        <input type="range" name="mess-variety" id="mess-variety" min="1" max="10" required>
+    </div>
+    <div class="form-group">
+        <label for="hostel-services">Which services are available in your hostel? (Check all that apply):</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="hostel-services" id="service-wifi" value="wifi">
+            <label for="service-wifi">Wi-Fi</label>
+            <input type="checkbox" name="hostel-services" id="service-laundry" value="laundry">
+            <label for="service-laundry">Laundry</label>
+            <input type="checkbox" name="hostel-services" id="service-maintenance" value="maintenance">
+            <label for="service-maintenance">Maintenance</label>
+            <input type="checkbox" name="hostel-services" id="service-cleaning" value="cleaning">
+            <label for="service-cleaning">Cleaning</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="hostel-issues">How frequently do you encounter issues in the hostel?</label>
+        <select name="hostel-issues" id="hostel-issues" required>
+            <option value="" disabled selected>Select</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="rarely">Rarely</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="mess-satisfaction">Are you satisfied with the mess food quality?</label>
+        <input type="radio" name="mess-satisfaction" id="mess-sat-1" value="yes" required>
+        <label for="mess-sat-1">Yes</label>
+        <input type="radio" name="mess-satisfaction" id="mess-sat-2" value="no" required>
+        <label for="mess-sat-2">No</label>
+    </div>
+    <div class="form-group">
+        <label for="hostel-comments">Any additional comments about the hostels and mess:</label>
+        <textarea name="hostel-comments" id="hostel-comments" placeholder="Your comments..." required></textarea>
+    </div>
+</div>
+
+
+                <!-- Navigation Buttons -->
+
+                <div class="buttons">
+                    <button type="button" id="back" class="back-button" style="display: none;"
+                        onclick="showPreviousSection()">Back</button>
+                    <button type="button" id="next" onclick="showNextSection()">Next</button>
+                    <button type="submit" id="submit" style="display: none;">Submit</button>
+                </div>
+
+            </form>
+            <!-- Success Message -->
+            <div id="success-message" class="success-message">Form submitted successfully!</div>
+            <div id="appreciation-box" class="appreciation-box">Thank you for filling out this form! Your feedback is
+                much appreciated.</div>
+            <div id="fill-another" class="fill-another">
+                <p>Would you like to fill another survey?</p> <a href="survey1.html">Survey 1</a><br> <a
+                    href="survey2.html">Survey 2</a><br> <a href="survey3.html">Survey 3</a>
+            </div>
+            <div id="reminder" class="reminder">Please remember to complete the survey!</div>
+
+        </div>
+    </main>
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.form-section');
+
+        function showNextSection() {
+            const currentSectionElement = sections[currentSection];
+            const inputs = currentSectionElement.querySelectorAll('input, select, textarea');
+            for (let input of inputs) {
+                if (!input.checkValidity()) {
+                    input.reportValidity();
+                    return; // Prevent moving to the next section
+                }
+            }
+
+            // If all inputs are valid, move to the next section
+            sections[currentSection].classList.remove('active');
+            currentSection++;
+            if (currentSection < sections.length) {
+                sections[currentSection].classList.add('active');
+            }
+
+            // Handle button visibility
+            document.getElementById('back').style.display = currentSection === 0 ? 'none' : 'block';
+            document.getElementById('next').style.display = currentSection === sections.length - 1 ? 'none' : 'block';
+            document.getElementById('submit').style.display = currentSection === sections.length - 1 ? 'block' : 'none';
+
+            updateProgressBar();
+        }
+
+        function showPreviousSection() {
+            sections[currentSection].classList.remove('active');
+            currentSection--;
+            sections[currentSection].classList.add('active');
+
+            // Handle button visibility
+            document.getElementById('back').style.display = currentSection === 0 ? 'none' : 'block';
+            document.getElementById('next').style.display = currentSection === sections.length - 1 ? 'none' : 'block';
+            document.getElementById('submit').style.display = currentSection === sections.length - 1 ? 'block' : 'none';
+
+            updateProgressBar();
+        }
+
+
+        function updateProgressBar() {
+            const progress = (currentSection / (sections.length - 1)) * 100;
+            document.getElementById('progress').style.width = `${progress}%`;
+            document.getElementById('progress').innerText = `${Math.round(progress)}%`;
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission 
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('appreciation-box').style.display = 'block'; // Show appreciation box 
+            document.getElementById('fill-another').style.display = 'block'; // Show fill another survey options 
+            document.getElementById('survey-form').reset();
+            return false; // Prevent form submission to a server
+
+        }
+        function showReminder() {
+    const reminder = document.getElementById('reminder');
+    reminder.style.display = 'block';
+    setTimeout(() => {
+        reminder.style.display = 'none';
+    }, 5000); // Hide reminder after 5 seconds
+}
+
+// Set interval to show reminder every 2 minutes
+setInterval(showReminder, 120000);
+
+
+
+        updateProgressBar();
+    </script>
+</body>
+
+</html>
