@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TestWise Dashboard</title>
+  <link rel="stylesheet" href="getstarted.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="frontpage.html" class="logo">
+        <img src="logo.jpg" alt="TestWise Logo" loading="lazy">
+    </a>
+      <ul class="nav-links">
+        <li><a href="FRONTPAGE.HTML">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="FEATURES.HTML">Features</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="view-test.html" id="my-tests"><i class="icon">📋</i> My Tests</a></li>
+        <li><a href="results.html" id="results"><i class="icon">📊</i> Results</a></li>
+        <li><a href="settings.html" id="settings"><i class="icon">⚙️</i> Settings</a></li>
+      </ul>
+    </aside>
+
+    <section class="dashboard">
+      <h1>Welcome to TestWise</h1>
+      <p>Begin by creating a new test, or view existing tests and results.</p>
+      <div class="actions">
+        <button class="btn create" id="create-test">Create New Test</button>
+        <button class="btn active" id="view-active-tests">View Active Tests</button>
+        <button class="btn analytics" id="view-analytics">Analytics</button>
+      </div>
+
+      <div class="stats">
+        <div class="card">
+          <h3>Active Tests</h3>
+          <p id="active-tests">0</p>
+        </div>
+        <div class="card">
+          <h3>Total Tests</h3>
+          <p id="total-tests">0</p>
+        </div>
+        <div class="card">
+          <h3>Completed Tests</h3>
+          <p id="completed-tests">0</p>
+        </div>
+        <div class="card">
+          <h3>Users</h3>
+          <p id="users">0</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>TestWise is a leading platform that empowers individuals and businesses to achieve their goals through innovative technology solutions.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <p>Email: support@testwise.com</p>
+            <p>Phone: +91 98765xxxxx</p>
+            <p>Address: 123 Testwise St, Innovation City</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TestWise. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="getstarted.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Trivia Test</title>
+  <link rel="stylesheet" href="history_test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">TestWise</div>
+          <ul class="nav-links">
+            <li><a href="FRONTPAGE.HTML">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="view-tests.html">View Tests</a></li>
+            <li><a href="active-tests.html">Active Tests</a></li>
+            <li><a href="results.html">Results</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+  <main class="container">
+    <h1>History Trivia Test</h1>
+    <form id="history-test-form">
+      <div class="question">
+        <h2>1. Who was the first President of the United States?</h2>
+         <label><input type="radio" name="q1" value="A">Thomas Jefferson</label>
+         <label><input type="radio" name="q1" value="B">George Washington</label>
+         <label><input type="radio" name="q1" value="C">Abraham Lincoln</label>
+        </div>
+
+      <div class="question">
+        <h2>2. What year did the Titanic sink?</h2>
+        <label><input type="radio" name="q2" value="A">1912</label>
+        <label><input type="radio" name="q2" value="B">1905</label>
+        <label><input type="radio" name="q2" value="C">1898</label>
+        </div>
+
+      <div class="question">
+        <h2>3. Who was the first woman to fly solo across the Atlantic Ocean?</h2>
+        <label><input type="radio" name="q3" value="A">Amelia Earhart</label>
+        <label><input type="radio" name="q3" value="B">Valentina Tereshkova</label>
+        <label><input type="radio" name="q3" value="C">Harriet Tubman</label>
+        </div>
+    
+      <div class="question">
+        <h2>4. What ancient civilization built the pyramids?</h2>
+        <label><input type="radio" name="q4" value="A">Romans</label>
+        <label><input type="radio" name="q4" value="B">Egyptians</label>
+        <label><input type="radio" name="q4" value="C">Greeks</label>
+        </div>
+
+      <button type="submit" class="btn">Submit Test</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="history_test.js"></script>
+</body>
+</html>

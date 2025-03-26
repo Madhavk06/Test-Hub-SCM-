@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar Test</title>
+  <link rel="stylesheet" href="grammar_test.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+    <div class="logo">TestWise</div>
+    <ul class="nav-links">
+        <li><a href="FRONTPAGE.HTML">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a> </li>
+        <li><a href="view-tests.html">View Tests</a></li>
+        <li><a href="active-tests.html">Active Tests</a></li>
+        <li><a href="results.html">Results</a></li>
+    </ul>
+</nav>
+  </header>
+
+  <main class="container">
+    <h1>English Grammar Test</h1>
+    <form id="grammar-test-form">
+    <!--Question 1-->
+    <div class="question">
+        <h2>1. Select the correct sentence.</h2>
+        <label><input type="radio" name="q1" value="A">She don't like coffee.</label>
+        <label><input type="radio" name="q1" value="B">She doesn't like coffee.</label>
+        <label><input type="radio" name="q1" value="C">She not like coffee.</label>
+        </div>
+    
+    <!--Question 2-->    
+    <div class="question">
+        <h2>2. Choose the correct form of the verb.</h2>
+         <label><input type="radio" name="q2" value="A">I will going to the store.</label>
+         <label><input type="radio" name="q2" value="B">I will go to the store.</label>
+         <label><input type="radio" name="q2" value="C">I goes to the store.</label>
+    </div>
+      
+    <!--Question 3-->
+      <div class="question">
+        <h2>3. Select the correct punctuation.</h2>
+        <label><input type="radio" name="q3" value="A">I am hungry, let's eat.</label>
+        <label><input type="radio" name="q3" value="B">I am hungry let's eat.</label>
+        <label><input type="radio" name="q3" value="C">I am hungry: let's eat.</label>
+    </div>
+    
+
+      <button type="submit" class="btn">Submit Test</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="grammar_test.js"></script>
+</body>
+</html>

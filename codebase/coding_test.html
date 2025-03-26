@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Skills Test</title>
+  <link rel="stylesheet" href="coding_test.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">TestWise</div>
+        <ul class="nav-links">
+          <li><a href="FRONTPAGE.HTML">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="view-tests.html">View Tests</a></li>
+          <li><a href="active-tests.html">Active Tests</a></li>
+          <li><a href="results.html">Results</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <main class="container">
+    <h1>Coding Skills Test</h1>
+    <form id="coding-test-form">
+      <div class="question">
+        <h2>1. Which of these is the correct syntax for a JavaScript function?</h2>
+        <label><input type="radio" name="q1" value="A">function myFunction()</label>
+        <label><input type="radio" name="q1" value="B">function = myFunction()</label>
+        <label><input type="radio" name="q1" value="C">myFunction: function()</label>
+        </div>
+
+      <div class="question">
+        <h2>2. How do you create a variable in Python?</h2>
+        <label><input type="radio" name="q2" value="A">var x = 10;</label>
+        <label><input type="radio" name="q2" value="B">let x = 10;</label>
+        <label><input type="radio" name="q2" value="C">x = 10</label>
+        </div>
+
+      <div class="question">
+        <h2>3. What is the correct way to comment in HTML?</h2>
+        <label><input type="radio" name="q3" value="A">&lt;!-- This is a comment --&gt;</label>
+        <label><input type="radio" name="q3" value="B">/* This is a comment */</label>
+        <label><input type="radio" name="q3" value="C">// This is a comment</label>
+        </div>
+
+      <div class="question">
+        <h2>4. In which language would you use the `console.log()` function?</h2>
+        <label><input type="radio" name="q4" value="A">Java</label>
+        <label><input type="radio" name="q4" value="B">JavaScript</label>
+        <label><input type="radio" name="q4" value="C">C++</label>
+        </div>
+
+      <button type="submit" class="btn">Submit Test</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="coding_test.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Main Container */
+.signup-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Section */
+.left-section {
+    background-color: #00214d;
+    color: white;
+    padding: 40px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.left-section .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #ffffff;
+    color: #00214d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.left-section .btn:hover {
+    background: #f8f9fa;
+    color: #00214d;
+}
+
+/* Right Section */
+.right-section {
+    padding: 40px;
+    flex: 2;
+    text-align: center;
+}
+
+.right-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333333;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.social-btn:hover {
+    background: #ddd;
+}
+
+/* Divider */
+.divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666666;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+    width: 40%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Form */
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.signup-form label a {
+    color: #00214d;
+    text-decoration: none;
+}
+
+.signup-form label a:hover {
+    text-decoration: underline;
+}
+
+.signup-form .btn {
+    width: 100%;
+    padding: 10px;
+    background: #00214d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-form .btn:hover {
+    background: #003366;
+}

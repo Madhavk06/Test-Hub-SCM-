@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - TestWise</title>
+  <link rel="stylesheet" href="results.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TestWise</div>
+      <ul class="nav-links">
+        <li><a href="FRONTPAGE.HTML">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="view-tests.html">View Tests</a></li>
+        <li><a href="active-tests.html">Active Tests</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Test Results</h1>
+
+    <div class="filters">
+      <label for="filter-tests">Filter by Test:</label>
+      <select id="filter-tests">
+        <option value="all">All Tests</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+      </select>
+    </div>
+
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Student Name</th>
+          <th>Score</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="results.js"></script>
+</body>
+</html>

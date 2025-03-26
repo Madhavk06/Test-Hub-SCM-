@@ -1,0 +1,147 @@
+/* General Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('a.jpg') no-repeat center center fixed;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.settings-section {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+.preferences {
+  margin-top: 20px;
+}
+
+.preference-item {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #1E3A8A;
+  color: #EFF6FF;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* margin-bottom: 0px; */
+}
+
+.footer-column {
+  width: 30%;
+  margin: 10px 0;
+}
+
+.footer-column h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-column p, .footer-column ul {
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 4px;
+}
+
+.footer-column ul li a {
+  color: #EFF6FF;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #1E3A8A;
+  /* padding: 20px; */
+  font-size: 0.9em;
+}

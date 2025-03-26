@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Challenge Test</title>
+  <link rel="stylesheet" href="science_test.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">TestWise</div>
+        <ul class="nav-links">
+            <li><a href="FRONTPAGE.HTML">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="view-tests.html">View Tests</a></li>
+            <li><a href="active-tests.html">Active Tests</a></li>
+            <li><a href="results.html">Results</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+  <main class="container">
+    <h1>Science Challenge</h1>
+    <form id="science-test-form">
+      <div class="question">
+        <h2>1. What is the chemical symbol for water?</h2>
+        <label><input type="radio" name="q1" value="A">H2O</label>
+        <label><input type="radio" name="q1" value="B">CO2</label>
+        <label><input type="radio" name="q1" value="C">O2</label>
+    </div>
+
+
+      <div class="question">
+        <h2>2. Which planet is known as the Red Planet?</h2>
+        <label><input type="radio" name="q2" value="A">Mars</label>
+        <label><input type="radio" name="q2" value="B">Venus</label>
+        <label><input type="radio" name="q2" value="C">Jupiter</label>
+    </div>
+    
+
+      <div class="question">
+        <h2>3. What is the boiling point of water?</h2>
+         <label><input type="radio" name="q3" value="A">90°C</label>
+         <label><input type="radio" name="q3" value="B">100°C</label>
+         <label><input type="radio" name="q3" value="C">110°C</label>
+        </div>
+
+      <div class="question">
+        <h2>4. Which gas do plants absorb from the air for photosynthesis?</h2>
+        <LABEL><input type="radio" name="q4" value="A">Oxygen</label>
+        <label><input type="radio" name="q4" value="B">Nitrogen</label>
+        <label><input type="radio" name="q4" value="C">Carbon Dioxide</label>
+        </div>
+
+
+      <button type="submit" class="submit-btn">Submit Test</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="science_test.js"></script>
+</body>
+</html>

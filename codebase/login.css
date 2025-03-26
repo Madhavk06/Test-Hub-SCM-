@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.login-section, .signup-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-section {
+    background-color: white;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: #db4437;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.divider {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #999;
+}
+
+.login-form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666;
+}
+
+label a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+label a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #005b99;
+}
+
+.signup-section {
+    background-color: #00296b;
+    color: white;
+    text-align: center;
+}
+
+.signup-section h2 {
+    font-size: 22px;
+}
+
+.signup-section p {
+    font-size: 16px;
+    margin: 20px 0;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="ass.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Portfolio Section -->
+        <div class="section portfolio-section">
+            <h1>My Portfolio</h1>
+            <img src=https://tse1.mm.bing.net/th?id=OIP.rsYACS8GkmlIfpag0WIgKAHaEh&pid=Api&P=0&h=180 alt="My Image" style="width:150px;height:150px;">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming
+                    <ol>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                    </ol>
+                </li>
+                <li>Web Development
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React</li>
+                    </ol>
+                </li>
+                <li>Data Analysis
+                    <ol>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Excel</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Feedback Form Section -->
+        <div class="section feedback-section">
+            <h2>Feedback</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                
+                <label for="satisfaction">Satisfaction Level:</label>
+                <input type="radio" id="excellent" name="satisfaction" value="Excellent" required>
+                <label for="excellent">Excellent</label>
+                <input type="radio" id="good" name="satisfaction" value="Good">
+                <label for="good">Good</label>
+                <input type="radio" id="average" name="satisfaction" value="Average">
+                <label for="average">Average</label><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="section navigation-section">
+            <h2>Navigation</h2>
+            <div class="nav-links">
+                <a href="#introduction">Introduction</a>
+                <a href="#contact-us">Contact Us</a>
+            </div>
+            <h3 id="introduction">Introduction</h3>
+            <p>This is the introduction section of the page.</p>
+            <h3 id="contact-us">Contact Us</h3>
+            <p>This is the contact us section of the page.</p>
+        </div>
+
+        <!-- Schedule Section -->
+        <div class="section schedule-section">
+            <h2>Weekly Class Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Mathematics</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>10:00 AM - 11:00 AM</td>
+                        <td>Physics</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>11:00 AM - 12:00 PM</td>
+                        <td>Chemistry</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>1:00 PM - 2:00 PM</td>
+                        <td>Biology</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>2:00 PM - 3:00 PM</td>
+                        <td>History</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="section contact-section">
+            <h2>Contact Information</h2>
+            <form action="#" method="POST">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="in">India</option>
+                </select>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

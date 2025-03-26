@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Test</title>
+  <link rel="stylesheet" href="math_test.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TestWise</div>
+      <ul class="nav-links">
+        <li><a href="FRONTPAGE.HTML">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="view-tests.html">View Tests</a></li>
+        <li><a href="active-tests.html">Active Tests</a></li>
+        <li><a href="results.html">Results</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Math Test</h1>
+    <form id="math-test-form">
+      <!-- Question 1 -->
+      <div class="question">
+        <h2>1. What is 5 + 3?</h2>
+        <label><input type="radio" name="q1" value="6"> 6</label>
+        <label><input type="radio" name="q1" value="8"> 8</label>
+        <label><input type="radio" name="q1" value="9"> 9</label>
+        <label><input type="radio" name="q1" value="7"> 7</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <h2>2. What is 12 - 7?</h2>
+        <label><input type="radio" name="q2" value="6"> 6</label>
+        <label><input type="radio" name="q2" value="5"> 5</label>
+        <label><input type="radio" name="q2" value="4"> 4</label>
+        <label><input type="radio" name="q2" value="7"> 7</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <h2>3. What is 9 × 2?</h2>
+        <label><input type="radio" name="q3" value="16"> 16</label>
+        <label><input type="radio" name="q3" value="18"> 18</label>
+        <label><input type="radio" name="q3" value="20"> 20</label>
+        <label><input type="radio" name="q3" value="19"> 19</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <h2>4. What is 15 ÷ 3?</h2>
+        <label><input type="radio" name="q4" value="6"> 6</label>
+        <label><input type="radio" name="q4" value="5"> 5</label>
+        <label><input type="radio" name="q4" value="7"> 7</label>
+        <label><input type="radio" name="q4" value="4"> 4</label>
+      </div>
+
+      <button type="submit" class="btn">Submit Test</button>
+    </form>
+    <div id="result" class="result" style="display: none;"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 TestWise. All Rights Reserved.</p>
+  </footer>
+
+  <script src="math_test.js"></script>
+</body>
+</html>

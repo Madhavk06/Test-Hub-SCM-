@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <!-- FontAwesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h2>Already a member?</h2>
+            <p>Sign in and see what's new since your last visit</p>
+            <a href="login.html" class="btn">Sign In</a>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h1>Create a new account</h1>
+            <p>Connect effortlessly using your preferred social network</p>
+            <div class="social-buttons">
+                <a href="https://facebook.com" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://google.com" target="_blank" class="social-btn google"><i class="fab fa-google"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="divider">OR</div>
+            <form id="signupForm" class="signup-form">
+                <div class="name-fields">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <label>
+                    <input type="checkbox" id="terms" required>
+                    I have read the <a href="#">terms and conditions</a>
+                </label>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
