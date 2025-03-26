@@ -1,0 +1,100 @@
+body {
+            
+    background-color:#14213d ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.login-container {
+    background-color:#e5e5e5;
+
+    width: 100vw;;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    width: 500px; 
+    text-align: center;
+    border: solid #fca311 5px;
+    position: relative; 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #fca311;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.register-button {
+    padding: 10px;
+    background-color: #28a1a7; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; 
+}
+
+.register-button:hover {
+    background-color: #218838; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: rgb(218, 44, 44);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: rgba(218, 44, 44, 0.3); 
+    color: #fff; 
+    border-radius: 5px; 
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #007bff;
+    cursor: pointer;
+}
