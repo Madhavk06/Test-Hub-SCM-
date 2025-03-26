@@ -1,0 +1,83 @@
+.div1{
+    border: 2px solid black;
+    background-color: rgb(245, 245, 73);
+    text-align: center;
+    font-size: 50px;
+    }
+    ul{
+    padding-left: 0%;
+    }
+    
+    h2{
+    color: chocolate;
+    width: 200px;
+    }
+    div{
+    border: 3px solid black;
+    background-color:bisque;
+    text-align: center;
+    width: 700px;
+    }
+    .div2{
+    border-left: 3px solid black;
+    height: 300px;
+    }
+    .flex{
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    width: 150px;
+    background-color: dimgray;
+    
+    }
+    .box{
+    background-color:burlywood;
+    font-size: 15px;
+    margin: 10px;
+    padding: 20px;
+    }
+    ul{
+    list-style-type:none;
+    }
+    
+    #resume{
+    background-color:lightblue;
+    font-size:25px;
+    width:600px;
+    height:30px;
+    overflow-wrap:break-word;
+    }
+    
+    .about{
+    width: 200px;
+    height: 250px;
+    float: right;
+    border: 3px solid black;
+    background-color:cornsilk;
+    }
+    .flex1{
+    display: flex;
+    height: 500px;
+    width: 650;
+    background-color:aliceblue;
+    }
+    .div3{
+    border: 3px solid black;
+    background-color:rgb(239, 239, 153);
+    font-size: large;
+    
+    }
+    body
+{background-image: radial-gradient(circle at center,rgb(215, 221, 221) 30%, rgb(85, 186, 195) 60%);}
+#photo{
+    border:2px solid black;
+    box-shadow:3px 6px 8px;
+    border-radius: 20px;
+s
+}
+#photo:hover{
+    box-shadow: 6px 12px 16px; 
+    transition : ease-in-out;
+    height:250;
+    width:450;
+}

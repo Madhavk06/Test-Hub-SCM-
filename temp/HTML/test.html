@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Management System</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            font-size: 30px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px 20px;
+            border: 2px solid #ffa500;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.4s;
+            background-color: #333;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+            background-color: #ffa500;
+            transform: scale(1.05);
+            box-shadow: 6px 12px 16px;
+            border-radius: 10px;
+        }
+
+        .welcome-text {
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url('blue-background-gradient.jpeg');
+            width: 100vw;
+            margin-top: 10px;
+            padding: 60px 20px;
+        }
+
+        .welcome-text h2 {
+            font-size: 3em;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .welcome-para {
+            font-size: 1.2em;
+            color: white;
+            width: 50vw;
+            border-right: 2px solid #3498db; /* Cursor effect */
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: blink-caret 0.75s step-end infinite; /* Caret blink */
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent; /* Invisible cursor */
+            }
+            50% {
+                border-color: #3498db; /* Visible cursor */
+            }
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden; /* Ensures text doesn't wrap */
+            border-right: 2px solid #3498db; /* Cursor effect */
+            white-space: nowrap; /* Prevents text wrapping */
+            animation: typing 5s steps(40, end) infinite alternate; /* Typewriter effect */
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%; /* Full width during typing */
+            }
+            100% {
+                width: 0; /* Reset width */
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 20px 30px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s, transform 0.4s;
+            border: 4px solid #ffa500;
+        }
+
+        .cta-button:hover {
+            background-color: #ffa500;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #features {
+            height: 400px;
+            background-color: #ffecd1;
+            padding: 40px 0;
+            border: 3px solid #030303;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .feature-box {
+            padding: 20px;
+            height: 220px;
+            box-shadow: 7px 7px 10px #14213d;
+            background-color: #fab07dfc;
+            border: 3px solid black;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box h3 {
+            font-size: 1.6em;
+            color: #030303;
+        }
+
+        .feature-box p {
+            font-size: 1.3em;
+            color: #4f4e4e;
+        }
+
+        #testimonials {
+            border: 4px solid black;
+            background-color: #e5e5e5;
+            padding: 40px 20px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .testimonial {
+            background-color: white;
+            border: 3px solid #ffa500;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .testimonial:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial p {
+            font-size: 1.4em;
+            margin: 0;
+        }
+
+        .testimonial h4 {
+            margin-top: 10px;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        #faq {
+            width: 100%;
+            background-color: #8da9c4;
+            padding: 40px 30px;
+            border: solid 4px #212529;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border: 3px solid #ffa500;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #edf2f4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .faq-item:hover {
+            transform: scale(1.02);
+        }
+
+        .faq-item h3 {
+            font-size: 1.7em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        footer {
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        .copyright {
+            background-color: #003049;
+            padding: 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .logo {
+            width: 300px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .footer-image {
+            text-align: center; /* Center the image */
+            margin: 20px 0; /* Add some spacing around the image */
+            background-color: #f2f2f2; /* Example background color */
+            padding: 10px; /* Add padding around the image */
+        }
+
+        .footer-image img {
+            max-width: 100%; /* Responsive width */
+            height: 200px; /* Maintain aspect ratio */
+            width: 700px; /* Set a fixed width */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="test-hub-high-resolution-logo-transparent.png" alt="Test Hub Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login3.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Homee">
+        <div class="welcome-text">
+            <h2>TEST Hub</h2>
+            <div class="typewriter">
+                <p class="welcome-para" id="typewriter-text">Your reliable partner in managing and tracking software tests. Overall, this platform sets a new standard for online assessments with its intuitive design and commitment to quality.</p>
+            </div>
+            <a href="login3.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h3>Test Case Management</h3>
+                    <p>Easily manage and organize your test cases in one place.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Automated Reports</h3>
+                    <p>Generate reports with detailed analysis on your test results.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Upcoming Tests</h3>
+                    <p>Check out the upcoming tests, so you don't miss any.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Different Subjects</h3>
+                    <p>A wide range of different subjects and topics available for testing knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Test Hub has made managing tests so much easier for our organization."</p>
+                    <h4>- Dr. Satnam Singh,<br> Professor</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The automated reports feature is a game-changer. Highly recommended!"</p>
+                    <h4>- Mulla,<br> Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"An intuitive platform with fantastic support. Great experience overall."</p>
+                    <h4>- Manpreet Singh,<br> Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Very easy to use and upcoming tests features enables me to keep a check of upcoming tests."</p>
+                    <h4>- Manan Goyal,<br> Student</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I create an account?</h3>
+                <p>To create an account, click on the "Get Started" button and follow the registration process.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I customize my tests?</h3>
+                <p>Yes, Test Hub allows you to customize the questions, time limits, and scoring methods for your tests.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I reattempt my test?</h3>
+                <p>Yes, Test Hub allows you to reattempt your test; there is no limit on attempts of a particular test.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact">
+            <h3 id="contacts">Reach out to us:</h3>
+            <p>Call +91 6284889XXX</p>
+            <p>Mail: testhubsupport@gmail.com</p>
+        </div>
+
+        <!-- New Image Section -->
+        <div class="footer-image">
+            <img src="https://s3-alpha.figma.com/hub/file/5517710951/f56cbae9-e83b-4b83-9a95-71a78334ee66-cover.png" alt="Footer Image">
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Test Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typewriter animation function
+        function typeWriter(text, element, speed) {
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    // Reset typing
+                    setTimeout(() => {
+                        element.innerHTML = ""; // Clear the text
+                        i = 0; // Reset index
+                        typing(); // Start typing again
+                    }, 2000); // Wait for 2 seconds before resetting
+                }
+            }
+            typing();
+        }
+
+        // Start the typewriter effect
+        const welcomeText = document.getElementById("typewriter-text");
+        const text = welcomeText.innerHTML; // Get the original text
+        welcomeText.innerHTML = ""; // Clear it for typing effect
+        typeWriter(text, welcomeText, 100); // Start typing
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+h1{
+    background-color:yellow;
+    text-align:center;
+    
+    }
+    #division{
+    border:4px dotted red;
+    position : absolute;
+        height : 150px;
+        width : 150px;
+        left : 1000px;
+        top : 70px; 
+    font-weight:bolder;
+    text-align:center;
+    font-size:24;
+    
+    }
+    #j{font-size:14;
+    text-align:left;}
+    
+    #dd{
+    height:475px;
+    border-left:4px solid green;
+    left:200px;
+    top:50px;
+    position:absolute;
+    width:500px;}
+    
+    
+    #cc{font-size:small;
+    text-align:right;}

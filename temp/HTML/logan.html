@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="login-container">
+        <button class="close-button" onclick="closeWindow()" aria-label="Close Window">✖</button>
+        <button class="back-button" onclick="goBack()" aria-label="Go Back">← Back</button>
+        <h2>Login Portal</h2>
+        <form class="login-form" onsubmit="return validateLogin()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter your username" 
+                    required 
+                    aria-label="Username"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    required 
+                    aria-label="Password"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="group-number">Group No.:</label>
+                <input 
+                    type="number" 
+                    id="group-number" 
+                    name="group-number" 
+                    placeholder="Enter your group number" 
+                    required 
+                    aria-label="Group Number" 
+                    min="1"
+                >
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+        <p style="font-weight: bold;">First time on Test Hub? <a href="signup2.html">Register</a></p>
+    </div>
+
+    <script>
+        function closeWindow() {
+            window.close(); 
+        }
+        
+        function goBack() {
+            window.history.back(); 
+        }
+
+        function validateLogin() {
+            
+            const correctPassword = "madhav@2006"; 
+            const enteredPassword = document.getElementById("password").value;
+            
+           
+            if (enteredPassword === correctPassword) {
+               
+                window.location.href = "dash.html";
+                return false; 
+            } else {
+                
+                document.getElementById("error-message").style.display = "block";
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>

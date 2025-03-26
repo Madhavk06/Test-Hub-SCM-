@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function showThankYouMessage(event) {
+            event.preventDefault();
+            alert("Thanks for your response");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <button class="close-button" onclick="window.close()">×</button>
+        <button class="back-button" onclick="goBack()">← Back</button>
+        <h2>Feedback Form</h2>
+        <form class="login-form" onsubmit="showThankYouMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+
+            <label for="help">How Test Hub helped you:</label>
+            <textarea id="help" name="help" rows="4" required></textarea>
+
+            <label for="suggestions">Suggestions:</label>
+            <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+
+            <label for="questions">Any Questions regarding Test Hub:</label>
+            <textarea id="questions" name="questions" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

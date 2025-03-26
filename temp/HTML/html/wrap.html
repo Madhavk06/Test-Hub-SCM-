@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            width: 150px;
+            border: 1px solid #000000;
+        }
+
+        div.a{
+            overflow-wrap: normal;
+        }
+
+        div.b{
+            overflow-wrap: break-word;
+        }
+
+        div.c{
+            overflow-wrap: anywhere;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut dolore ipsum iste? Sint, quae eum voluptas itaque quia hic!</p>
+    </div>
+    <div.a>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero at iste porro nemo perspiciatis ad..</p>
+    </div.a>
+    <div.b>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolor similique. Dignissimos distinctio unde perspiciatis tenetur dolore blanditiis repellendus voluptas provident hic est? Nihil, autem ea? Iure culpa deleniti et!
+        </p>
+    </div.b>
+    <div.c>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, qui quibusdam? Quis inventore possimus optio dignissimos laudantium voluptatibus fugit porro? Expedita quod officiis quasi asperiores, cupiditate eum, molestiae possimus omnis velit deleniti laboriosam optio! Atque unde incidunt ex vero ad.
+
+        </p>
+    </div.c>
+    
+</body>
+</html>
